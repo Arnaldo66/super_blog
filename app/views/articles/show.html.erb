@@ -1,0 +1,16 @@
+<h1><%= @article.id %> - <%= @article.title %></h1>
+<p><%=	@article.body %></p>
+
+<h2>Commentaire</h2>
+<% @article.commentaires.each do |commentaire| %>
+	<p  class="comments"><%= commentaire.message %></p>
+<% end %>
+
+
+<h2>Ajouter un commentaire</h2>
+<%= form_for [@article, @commentaire] do |f| %>
+
+  <p><%= f.text_area :message %></p>
+
+  <p><%= f.submit %></p>
+<% end %>

@@ -33,8 +33,12 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem 'capybara'
-  gem 'rspec-rails'
+  gem 'database_cleaner', require: false
+  gem 'capybara', require: false
+  gem 'rspec-rails', require: false
+  gem 'guard-rspec', require: false
+  gem 'spring-commands-rspec', require: false
+  gem 'factory_girl_rails', require: false
 end
 
 group :development do
